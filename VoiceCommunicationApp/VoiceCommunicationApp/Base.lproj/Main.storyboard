@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VoiceCommunicationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EdW-ki-2Xh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tV7-ia-Ml3">
+                                <rect key="frame" x="20" y="79" width="353" height="90.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switchboard-sdk-logo-text" translatesAutoresizingMaskIntoConstraints="NO" id="njS-YZ-uzR">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gfc-zM-IGg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mu-Zp-Xar">
+                                        <rect key="frame" x="0.0" y="56" width="353" height="34.333333333333343"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Join"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="njS-YZ-uzR" firstAttribute="leading" secondItem="tV7-ia-Ml3" secondAttribute="leading" id="Gg1-aO-VRt"/>
+                                    <constraint firstAttribute="trailing" secondItem="njS-YZ-uzR" secondAttribute="trailing" id="m3h-rY-smY"/>
+                                    <constraint firstItem="njS-YZ-uzR" firstAttribute="top" secondItem="tV7-ia-Ml3" secondAttribute="top" id="n8S-7c-g18"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yRQ-PT-aFY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tV7-ia-Ml3" firstAttribute="leading" secondItem="yRQ-PT-aFY" secondAttribute="leading" constant="20" id="E6P-L4-CTp"/>
+                            <constraint firstAttribute="trailing" secondItem="tV7-ia-Ml3" secondAttribute="trailing" constant="20" id="FBA-cJ-FwZ"/>
+                            <constraint firstItem="tV7-ia-Ml3" firstAttribute="top" secondItem="yRQ-PT-aFY" secondAttribute="top" constant="20" id="bTm-ie-431"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switchboard-sdk-logo-text" width="449.39999389648438" height="82"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.53725490196078429" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

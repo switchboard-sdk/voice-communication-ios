@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "agorartcengine_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraRtcEngine_iOS",
+      "state" : {
+        "revision" : "7cce4dcc6ff7471473195c6ccb5b0aa2a6d5ba42",
+        "version" : "3.7.0"
+      }
+    },
+    {
+      "identity" : "switchboard-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/switchboard-sdk/switchboard-sdk-ios",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "2de416a7d5a5a1d72a797dafa235ab690b2384a2"
+      }
+    }
+  ],
+  "version" : 2
+}
