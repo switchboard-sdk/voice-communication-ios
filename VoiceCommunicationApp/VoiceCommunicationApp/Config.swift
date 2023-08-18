@@ -8,9 +8,9 @@
 import Foundation
 
 struct Config {
-    static let clientID = "Synervoz"
-    static let clientSecret = "VoiceCommunicationApp"
-    static let agoraAppID = "342f4519235d4e43a2ac8c74edb5d6ee"
+    static let clientID = "ENTER CLIENT ID"
+    static let clientSecret = "ENTER CLIENT SECRET"
+    static let agoraAppID = "ENTER AGORA APP ID"
 
     static let switchboardAPIBaseURL = "https://api-dev.synervoz.com/"
 }

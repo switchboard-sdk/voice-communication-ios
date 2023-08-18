@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F2C4EB12A8D1F59008A51A0 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2C4EB02A8D1F59008A51A0 /* RtcBasic */; };
 		4F2C4EB32A8D244A008A51A0 /* AudioSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C4EB22A8D244A008A51A0 /* AudioSystem.swift */; };
+		4F2C4EB52A8E6FE3008A51A0 /* CommunicationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C4EB42A8E6FE3008A51A0 /* CommunicationSystem.swift */; };
+		4F2C4EB72A8F7F7D008A51A0 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C4EB62A8F7F7D008A51A0 /* UserListTableViewCell.swift */; };
 		4FCB00372A8CFC080064DD7C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB00362A8CFC080064DD7C /* Config.swift */; };
 		4FDF2E012A8BE6100034DC53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF2E002A8BE6100034DC53 /* AppDelegate.swift */; };
 		4FDF2E032A8BE6100034DC53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF2E022A8BE6100034DC53 /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		4F2C4EB22A8D244A008A51A0 /* AudioSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSystem.swift; sourceTree = "<group>"; };
+		4F2C4EB42A8E6FE3008A51A0 /* CommunicationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationSystem.swift; sourceTree = "<group>"; };
+		4F2C4EB62A8F7F7D008A51A0 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 		4FCB00362A8CFC080064DD7C /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4FDF2DFD2A8BE6100034DC53 /* VoiceCommunicationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceCommunicationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDF2E002A8BE6100034DC53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				4FDF2E0E2A8BE6110034DC53 /* Info.plist */,
 				4FCB00362A8CFC080064DD7C /* Config.swift */,
 				4F2C4EB22A8D244A008A51A0 /* AudioSystem.swift */,
+				4F2C4EB42A8E6FE3008A51A0 /* CommunicationSystem.swift */,
+				4F2C4EB62A8F7F7D008A51A0 /* UserListTableViewCell.swift */,
 			);
 			path = VoiceCommunicationApp;
 			sourceTree = "<group>";
@@ -160,9 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDF2E052A8BE6100034DC53 /* ViewController.swift in Sources */,
+				4F2C4EB52A8E6FE3008A51A0 /* CommunicationSystem.swift in Sources */,
 				4FCB00372A8CFC080064DD7C /* Config.swift in Sources */,
 				4F2C4EB32A8D244A008A51A0 /* AudioSystem.swift in Sources */,
 				4FDF2E012A8BE6100034DC53 /* AppDelegate.swift in Sources */,
+				4F2C4EB72A8F7F7D008A51A0 /* UserListTableViewCell.swift in Sources */,
 				4FDF2E032A8BE6100034DC53 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
