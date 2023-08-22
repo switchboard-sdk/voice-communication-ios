@@ -11,35 +11,30 @@ import SwitchboardAgora
 class AudioSystem {
     let audioEngine = SBAudioEngine()
     let audioGraph = SBAudioGraph()
-    let agoraSourceNode: SBAgoraSourceNode
-    let agoraSinkNode: SBAgoraSinkNode
     let multiChannelToMonoNode = SBMultiChannelToMonoNode()
-    let agoraSourceResamplerNode = SBResamplerNode()
-    let agoraSinkResamplerNode = SBResamplerNode()
+    let agoraResampledSourceNode = SBResampledSourceNode()
+    let agoraResampledSinkNode = SBResampledSinkNode()
     let monoToMultiChannelNode = SBMonoToMultiChannelNode()
 
     init(roomManager: RoomManager) {
         audioEngine.microphoneEnabled = true
+        audioEngine.voiceProcessingEnabled = true
 
-        agoraSourceNode = roomManager.sourceNode
-        agoraSinkNode = roomManager.sinkNode
+        agoraResampledSourceNode.sourceNode = roomManager.sourceNode
+        agoraResampledSinkNode.sinkNode = roomManager.sinkNode
+        
+        agoraResampledSourceNode.internalSampleRate = roomManager.audioBus.getSampleRate()
+        agoraResampledSinkNode.internalSampleRate = roomManager.audioBus.getSampleRate()
 
-        agoraSourceResamplerNode.inputSampleRate = roomManager.audioBus.getSampleRate()
-        agoraSinkResamplerNode.outputSampleRate = roomManager.audioBus.getSampleRate()
-
-        audioGraph.addNode(agoraSourceNode)
-        audioGraph.addNode(agoraSinkNode)
         audioGraph.addNode(multiChannelToMonoNode)
-        audioGraph.addNode(agoraSourceResamplerNode)
-        audioGraph.addNode(agoraSinkResamplerNode)
+        audioGraph.addNode(agoraResampledSourceNode)
+        audioGraph.addNode(agoraResampledSinkNode)
         audioGraph.addNode(monoToMultiChannelNode)
 
         audioGraph.connect(audioGraph.inputNode, to: multiChannelToMonoNode)
-        audioGraph.connect(multiChannelToMonoNode, to: agoraSinkResamplerNode)
-        audioGraph.connect(agoraSinkResamplerNode, to: agoraSinkNode)
+        audioGraph.connect(multiChannelToMonoNode, to: agoraResampledSinkNode)
 
-        audioGraph.connect(agoraSourceNode, to: agoraSourceResamplerNode)
-        audioGraph.connect(agoraSourceResamplerNode, to: monoToMultiChannelNode)
+        audioGraph.connect(agoraResampledSourceNode, to: monoToMultiChannelNode)
         audioGraph.connect(monoToMultiChannelNode, to: audioGraph.outputNode)
     }
 
