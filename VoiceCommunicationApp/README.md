@@ -1,4 +1,10 @@
-# Voice Communication App
+# Voice Communication App - iOS
+
+## Important Links
+
+<a href="https://docs.switchboard.audio/docs/examples/voice-communication-app/" target="_blank">Find more info on the Voice Communication App HERE</a>
+
+<a href="https://docs.switchboard.audio/" target="_blank">Find more info on the Switchboard SDK HERE</a>
 
 ## About Voice Communication
 

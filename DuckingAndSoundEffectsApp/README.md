@@ -1,4 +1,10 @@
-# Ducking And Sound Effects App
+# Ducking And Sound Effects App - iOS
+
+## Important Links
+
+<a href="https://docs.switchboard.audio/docs/examples/ducking-and-sound-effects-app/" target="_blank">Find more info on the Ducking And Sound Effects App HERE</a>
+
+<a href="https://docs.switchboard.audio/" target="_blank">Find more info on the Switchboard SDK HERE</a>
 
 ## About Ducking And Sound Effects
 
