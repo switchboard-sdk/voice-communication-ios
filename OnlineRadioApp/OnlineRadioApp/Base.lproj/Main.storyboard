@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnlineRadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y3q-WC-p6C">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1L0-O9-waD">
+                                <rect key="frame" x="20" y="78.999999999999972" width="353" height="378.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switchboard-sdk-logo-text" translatesAutoresizingMaskIntoConstraints="NO" id="71o-Dl-Pcl">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ukj-Mu-bdi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anY-3S-RMN">
+                                        <rect key="frame" x="0.0" y="60" width="353" height="264"/>
+                                        <string key="text">
+Welcome to the Online Radio App!
+
+Select your role by pressing one of the buttons below.
+
+By selecting host you will be able to broadcast music, sound effects and your voice.
+
+By selecting listener you can listen to the music, sound effects and the voice of the host of the channel.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-LB-nO6">
+                                        <rect key="frame" x="0.0" y="344" width="353" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJB-AI-i5m">
+                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="34.333333333333336"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="I am a host"/>
+                                                <connections>
+                                                    <segue destination="fEN-oS-qfY" kind="show" id="f3Q-7l-S6j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTr-lh-fQJ">
+                                                <rect key="frame" x="176.66666666666663" y="0.0" width="176.33333333333337" height="34.333333333333336"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="I am a listener"/>
+                                                <connections>
+                                                    <segue destination="CLP-yg-yfx" kind="show" id="p9Y-7W-hMT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="71o-Dl-Pcl" firstAttribute="top" secondItem="1L0-O9-waD" secondAttribute="top" id="296-s6-p80"/>
+                                    <constraint firstAttribute="trailing" secondItem="71o-Dl-Pcl" secondAttribute="trailing" id="5pt-6a-Pad"/>
+                                    <constraint firstItem="71o-Dl-Pcl" firstAttribute="leading" secondItem="1L0-O9-waD" secondAttribute="leading" id="ey0-cz-cCp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oej-Nf-yVi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1L0-O9-waD" firstAttribute="leading" secondItem="Oej-Nf-yVi" secondAttribute="leading" constant="20" id="4Pc-Wv-SYH"/>
+                            <constraint firstAttribute="trailing" secondItem="1L0-O9-waD" secondAttribute="trailing" constant="20" id="DOw-gb-Fte"/>
+                            <constraint firstItem="1L0-O9-waD" firstAttribute="top" secondItem="Oej-Nf-yVi" secondAttribute="top" constant="20" id="HWL-0O-aQF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="4"/>
+        </scene>
+        <!--Listener View Controller-->
+        <scene sceneID="FX8-ON-po2">
+            <objects>
+                <viewController id="CLP-yg-yfx" customClass="ListenerViewController" customModule="OnlineRadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJ8-SW-JMX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GFp-hx-Thc">
+                                <rect key="frame" x="20" y="20" width="353" height="300.66666666666669"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switchboard-sdk-logo-text" translatesAutoresizingMaskIntoConstraints="NO" id="Lyy-1P-Zw3">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mqh-IC-eG5"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzB-qB-9wS">
+                                        <rect key="frame" x="0.0" y="50.000000000000014" width="353" height="162.33333333333337"/>
+                                        <string key="text">
+You are a listener now.
+
+Enter a channel name and press Listen to start listening to the channel.
+
+Press Stop to stop listening to the channel.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Channel name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQg-jS-4gz">
+                                        <rect key="frame" x="0.0" y="222.33333333333334" width="353" height="34.000000000000028"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="channelNameEdited:" destination="CLP-yg-yfx" eventType="editingDidEnd" id="Ygr-8M-gb9"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaF-wB-AKP">
+                                        <rect key="frame" x="0.0" y="266.33333333333331" width="353" height="34.333333333333314"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Listen"/>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="CLP-yg-yfx" eventType="touchUpInside" id="CDd-ZF-ryT"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUs-HB-cP1" userLabel="Channel active">
+                                        <rect key="frame" x="0.0" y="300.66666666666669" width="353" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lyy-1P-Zw3" firstAttribute="leading" secondItem="GFp-hx-Thc" secondAttribute="leading" id="KsF-lR-2Qh"/>
+                                    <constraint firstItem="Lyy-1P-Zw3" firstAttribute="top" secondItem="GFp-hx-Thc" secondAttribute="top" id="dNj-GU-SG2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lyy-1P-Zw3" secondAttribute="trailing" id="o1g-O5-6Mn"/>
+                                </constraints>
+                            </stackView>
+                            <view hidden="YES" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmh-mr-csS" userLabel="Loader">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EUQ-XU-dHQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EUQ-XU-dHQ" secondAttribute="trailing" id="3SG-kC-qx2"/>
+                                    <constraint firstItem="EUQ-XU-dHQ" firstAttribute="leading" secondItem="Lmh-mr-csS" secondAttribute="leading" id="J2L-uu-iNi"/>
+                                    <constraint firstItem="EUQ-XU-dHQ" firstAttribute="top" secondItem="Lmh-mr-csS" secondAttribute="top" id="Ty8-YE-Rvr"/>
+                                    <constraint firstAttribute="bottom" secondItem="EUQ-XU-dHQ" secondAttribute="bottom" id="VeI-th-qUa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WmD-1e-lKh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lmh-mr-csS" firstAttribute="top" secondItem="FJ8-SW-JMX" secondAttribute="top" id="22s-1l-yu1"/>
+                            <constraint firstAttribute="trailing" secondItem="GFp-hx-Thc" secondAttribute="trailing" constant="20" id="5bI-rV-B9J"/>
+                            <constraint firstItem="Lmh-mr-csS" firstAttribute="leading" secondItem="WmD-1e-lKh" secondAttribute="leading" id="70e-XW-zY8"/>
+                            <constraint firstItem="Lmh-mr-csS" firstAttribute="trailing" secondItem="WmD-1e-lKh" secondAttribute="trailing" id="7B3-SW-C3E"/>
+                            <constraint firstItem="GFp-hx-Thc" firstAttribute="top" secondItem="WmD-1e-lKh" secondAttribute="top" constant="20" id="8FL-6T-T3Y"/>
+                            <constraint firstItem="GFp-hx-Thc" firstAttribute="leading" secondItem="WmD-1e-lKh" secondAttribute="leading" constant="20" id="9pF-xi-xVR"/>
+                            <constraint firstAttribute="bottom" secondItem="Lmh-mr-csS" secondAttribute="bottom" id="TpG-Vz-sdp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bA2-wg-yws"/>
+                    <connections>
+                        <outlet property="actionButton" destination="LaF-wB-AKP" id="axx-lr-fXQ"/>
+                        <outlet property="channelActiveLabel" destination="bUs-HB-cP1" id="pYQ-n7-FAa"/>
+                        <outlet property="channelNameField" destination="DQg-jS-4gz" id="U2V-IK-WBN"/>
+                        <outlet property="loader" destination="Lmh-mr-csS" id="LhJ-5t-7Ba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWA-Ua-7QV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="332"/>
+        </scene>
+        <!--Host View Controller-->
+        <scene sceneID="pdB-Hs-IUP">
+            <objects>
+                <viewController id="fEN-oS-qfY" customClass="HostViewController" customModule="OnlineRadioApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9s-ZL-gMt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d9q-eb-aPb">
+                                <rect key="frame" x="20" y="20" width="353" height="467"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="switchboard-sdk-logo-text" translatesAutoresizingMaskIntoConstraints="NO" id="AAJ-P8-Cu9">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4RL-oD-r4e"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6r-7y-55S">
+                                        <rect key="frame" x="0.0" y="50" width="353" height="284.33333333333331"/>
+                                        <string key="text">
+You are a host now.
+
+Enter a channel name and press Start Broadcast to start.
+
+Press Play Music to start music playback on the channel.
+
+Press Play Sound Effect to broadcast a sound effect on the channel.
+
+Press Stop Broadcast to stop.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Channel name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YcF-Wg-yNy">
+                                        <rect key="frame" x="0.0" y="344.33333333333331" width="353" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="channelNameEdited:" destination="fEN-oS-qfY" eventType="editingDidEnd" id="eaw-j7-PlA"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXP-ns-Fwr">
+                                        <rect key="frame" x="0.0" y="388.33333333333331" width="353" height="34.333333333333314"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Broadcast"/>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="fEN-oS-qfY" eventType="touchUpInside" id="Vwa-5C-SyU"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07h-Ti-KDw">
+                                        <rect key="frame" x="0.0" y="427.66666666666669" width="353" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-gG-BdE">
+                                        <rect key="frame" x="0.0" y="432.66666666666669" width="353" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdg-Dq-cQy" userLabel="Play Music Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="170.66666666666666" height="34.333333333333336"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Play Music"/>
+                                                <connections>
+                                                    <action selector="musicButtonTapped:" destination="fEN-oS-qfY" eventType="touchUpInside" id="Mkc-MM-0la"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx7-fQ-y0Q" userLabel="Play Sound Effect Button">
+                                                <rect key="frame" x="182.66666666666663" y="0.0" width="170.33333333333337" height="34.333333333333336"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Play Sound Effect"/>
+                                                <connections>
+                                                    <action selector="soundEffectButtonTapped:" destination="fEN-oS-qfY" eventType="touchUpInside" id="kib-ur-sE4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AAJ-P8-Cu9" firstAttribute="top" secondItem="d9q-eb-aPb" secondAttribute="top" id="59h-0R-GB4"/>
+                                    <constraint firstItem="AAJ-P8-Cu9" firstAttribute="leading" secondItem="d9q-eb-aPb" secondAttribute="leading" id="Jee-Rs-RvJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="AAJ-P8-Cu9" secondAttribute="trailing" id="fY7-jN-hvk"/>
+                                </constraints>
+                            </stackView>
+                            <view hidden="YES" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7m-J2-5TD" userLabel="Loader">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FWB-Cc-3mO">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FWB-Cc-3mO" secondAttribute="trailing" id="Kxe-wp-mk6"/>
+                                    <constraint firstItem="FWB-Cc-3mO" firstAttribute="leading" secondItem="Z7m-J2-5TD" secondAttribute="leading" id="LsP-FP-HFE"/>
+                                    <constraint firstItem="FWB-Cc-3mO" firstAttribute="top" secondItem="Z7m-J2-5TD" secondAttribute="top" id="Oo9-Oa-Bce"/>
+                                    <constraint firstAttribute="bottom" secondItem="FWB-Cc-3mO" secondAttribute="bottom" id="d1Z-OV-3ME"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xkW-re-BZ2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z7m-J2-5TD" firstAttribute="leading" secondItem="xkW-re-BZ2" secondAttribute="leading" id="9O0-Rn-ZOw"/>
+                            <constraint firstItem="Z7m-J2-5TD" firstAttribute="bottom" secondItem="xkW-re-BZ2" secondAttribute="bottom" id="L5p-wj-puQ"/>
+                            <constraint firstItem="d9q-eb-aPb" firstAttribute="leading" secondItem="xkW-re-BZ2" secondAttribute="leading" constant="20" id="VXf-sQ-HSJ"/>
+                            <constraint firstAttribute="trailing" secondItem="d9q-eb-aPb" secondAttribute="trailing" constant="20" id="f9g-mG-Y29"/>
+                            <constraint firstItem="Z7m-J2-5TD" firstAttribute="top" secondItem="xkW-re-BZ2" secondAttribute="top" id="qYK-hB-VZP"/>
+                            <constraint firstItem="d9q-eb-aPb" firstAttribute="top" secondItem="xkW-re-BZ2" secondAttribute="top" constant="20" id="rTU-Bl-aip"/>
+                            <constraint firstItem="Z7m-J2-5TD" firstAttribute="trailing" secondItem="xkW-re-BZ2" secondAttribute="trailing" id="t6H-cp-1P6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZH-T5-P04"/>
+                    <connections>
+                        <outlet property="actionButton" destination="nXP-ns-Fwr" id="WgO-mh-Iip"/>
+                        <outlet property="channelActiveLabel" destination="07h-Ti-KDw" id="Q5z-BK-KW6"/>
+                        <outlet property="channelNameField" destination="YcF-Wg-yNy" id="BMg-I5-Y7g"/>
+                        <outlet property="loader" destination="Z7m-J2-5TD" id="V7S-qa-Y9H"/>
+                        <outlet property="musicButton" destination="Qdg-Dq-cQy" id="3lu-kq-HzL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhM-b2-bxm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1172" y="-339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switchboard-sdk-logo-text" width="449.39999389648438" height="82"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.53725490196078429" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

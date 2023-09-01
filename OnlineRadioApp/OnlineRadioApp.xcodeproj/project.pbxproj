@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FDE76232A9E511500FA047B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76222A9E511500FA047B /* AppDelegate.swift */; };
+		4FDE76252A9E511500FA047B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76242A9E511500FA047B /* SceneDelegate.swift */; };
+		4FDE76272A9E511500FA047B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76262A9E511500FA047B /* ViewController.swift */; };
+		4FDE762A2A9E511500FA047B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE76282A9E511500FA047B /* Main.storyboard */; };
+		4FDE762C2A9E511600FA047B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE762B2A9E511600FA047B /* Assets.xcassets */; };
+		4FDE762F2A9E511600FA047B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE762D2A9E511600FA047B /* LaunchScreen.storyboard */; };
+		4FDE76382A9E525A00FA047B /* SwitchboardAgora in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDE76372A9E525A00FA047B /* SwitchboardAgora */; };
+		4FDE763A2A9E525A00FA047B /* SwitchboardSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDE76392A9E525A00FA047B /* SwitchboardSDK */; };
+		4FDE763D2A9E529400FA047B /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDE763C2A9E529400FA047B /* RtcBasic */; };
+		4FDE763F2A9E52C000FA047B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE763E2A9E52C000FA047B /* Config.swift */; };
+		4FDE76432A9E530F00FA047B /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76422A9E530F00FA047B /* HostViewController.swift */; };
+		4FDE76452A9E535600FA047B /* ListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76442A9E535600FA047B /* ListenerViewController.swift */; };
+		4FDE76472A9E536700FA047B /* HostAudioSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76462A9E536700FA047B /* HostAudioSystem.swift */; };
+		4FDE76492A9E537200FA047B /* ListenerAudioSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE76482A9E537200FA047B /* ListenerAudioSystem.swift */; };
+		4FDE764D2A9E548F00FA047B /* airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE764B2A9E548F00FA047B /* airhorn.mp3 */; };
+		4FDE764E2A9E548F00FA047B /* EMH-My_Lover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE764C2A9E548F00FA047B /* EMH-My_Lover.mp3 */; };
+		4FDE76502A9E5AB300FA047B /* CommunicationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE764F2A9E5AB300FA047B /* CommunicationSystem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineRadioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDE76222A9E511500FA047B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FDE76242A9E511500FA047B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4FDE76262A9E511500FA047B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FDE76292A9E511500FA047B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FDE762B2A9E511600FA047B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FDE762E2A9E511600FA047B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FDE76302A9E511600FA047B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FDE763E2A9E52C000FA047B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		4FDE76422A9E530F00FA047B /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
+		4FDE76442A9E535600FA047B /* ListenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerViewController.swift; sourceTree = "<group>"; };
+		4FDE76462A9E536700FA047B /* HostAudioSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostAudioSystem.swift; sourceTree = "<group>"; };
+		4FDE76482A9E537200FA047B /* ListenerAudioSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerAudioSystem.swift; sourceTree = "<group>"; };
+		4FDE764B2A9E548F00FA047B /* airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = airhorn.mp3; path = ../../../DuckingAndSoundEffectsApp/DuckingAndSoundEffectsApp/Resources/airhorn.mp3; sourceTree = "<group>"; };
+		4FDE764C2A9E548F00FA047B /* EMH-My_Lover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "EMH-My_Lover.mp3"; path = "../../../DuckingAndSoundEffectsApp/DuckingAndSoundEffectsApp/Resources/EMH-My_Lover.mp3"; sourceTree = "<group>"; };
+		4FDE764F2A9E5AB300FA047B /* CommunicationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationSystem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FDE761C2A9E511500FA047B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDE763A2A9E525A00FA047B /* SwitchboardSDK in Frameworks */,
+				4FDE76382A9E525A00FA047B /* SwitchboardAgora in Frameworks */,
+				4FDE763D2A9E529400FA047B /* RtcBasic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FDE76162A9E511500FA047B = {
+			isa = PBXGroup;
+			children = (
+				4FDE76212A9E511500FA047B /* OnlineRadioApp */,
+				4FDE76202A9E511500FA047B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FDE76202A9E511500FA047B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FDE76212A9E511500FA047B /* OnlineRadioApp */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE764A2A9E547600FA047B /* Resources */,
+				4FDE76412A9E52DE00FA047B /* Host */,
+				4FDE76402A9E52D800FA047B /* Listener */,
+				4FDE76222A9E511500FA047B /* AppDelegate.swift */,
+				4FDE76242A9E511500FA047B /* SceneDelegate.swift */,
+				4FDE76262A9E511500FA047B /* ViewController.swift */,
+				4FDE76282A9E511500FA047B /* Main.storyboard */,
+				4FDE762B2A9E511600FA047B /* Assets.xcassets */,
+				4FDE762D2A9E511600FA047B /* LaunchScreen.storyboard */,
+				4FDE76302A9E511600FA047B /* Info.plist */,
+				4FDE763E2A9E52C000FA047B /* Config.swift */,
+				4FDE764F2A9E5AB300FA047B /* CommunicationSystem.swift */,
+			);
+			path = OnlineRadioApp;
+			sourceTree = "<group>";
+		};
+		4FDE76402A9E52D800FA047B /* Listener */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE76442A9E535600FA047B /* ListenerViewController.swift */,
+				4FDE76482A9E537200FA047B /* ListenerAudioSystem.swift */,
+			);
+			path = Listener;
+			sourceTree = "<group>";
+		};
+		4FDE76412A9E52DE00FA047B /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE76422A9E530F00FA047B /* HostViewController.swift */,
+				4FDE76462A9E536700FA047B /* HostAudioSystem.swift */,
+			);
+			path = Host;
+			sourceTree = "<group>";
+		};
+		4FDE764A2A9E547600FA047B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FDE764B2A9E548F00FA047B /* airhorn.mp3 */,
+				4FDE764C2A9E548F00FA047B /* EMH-My_Lover.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FDE761E2A9E511500FA047B /* OnlineRadioApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FDE76332A9E511600FA047B /* Build configuration list for PBXNativeTarget "OnlineRadioApp" */;
+			buildPhases = (
+				4FDE761B2A9E511500FA047B /* Sources */,
+				4FDE761C2A9E511500FA047B /* Frameworks */,
+				4FDE761D2A9E511500FA047B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnlineRadioApp;
+			packageProductDependencies = (
+				4FDE76372A9E525A00FA047B /* SwitchboardAgora */,
+				4FDE76392A9E525A00FA047B /* SwitchboardSDK */,
+				4FDE763C2A9E529400FA047B /* RtcBasic */,
+			);
+			productName = OnlineRadioApp;
+			productReference = 4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FDE76172A9E511500FA047B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4FDE761E2A9E511500FA047B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4FDE761A2A9E511500FA047B /* Build configuration list for PBXProject "OnlineRadioApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FDE76162A9E511500FA047B;
+			packageReferences = (
+				4FDE76362A9E525A00FA047B /* XCRemoteSwiftPackageReference "switchboard-sdk-ios" */,
+				4FDE763B2A9E529400FA047B /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+			);
+			productRefGroup = 4FDE76202A9E511500FA047B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FDE761E2A9E511500FA047B /* OnlineRadioApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FDE761D2A9E511500FA047B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDE764D2A9E548F00FA047B /* airhorn.mp3 in Resources */,
+				4FDE764E2A9E548F00FA047B /* EMH-My_Lover.mp3 in Resources */,
+				4FDE762F2A9E511600FA047B /* LaunchScreen.storyboard in Resources */,
+				4FDE762C2A9E511600FA047B /* Assets.xcassets in Resources */,
+				4FDE762A2A9E511500FA047B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FDE761B2A9E511500FA047B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDE76452A9E535600FA047B /* ListenerViewController.swift in Sources */,
+				4FDE76492A9E537200FA047B /* ListenerAudioSystem.swift in Sources */,
+				4FDE76272A9E511500FA047B /* ViewController.swift in Sources */,
+				4FDE76432A9E530F00FA047B /* HostViewController.swift in Sources */,
+				4FDE763F2A9E52C000FA047B /* Config.swift in Sources */,
+				4FDE76232A9E511500FA047B /* AppDelegate.swift in Sources */,
+				4FDE76472A9E536700FA047B /* HostAudioSystem.swift in Sources */,
+				4FDE76502A9E5AB300FA047B /* CommunicationSystem.swift in Sources */,
+				4FDE76252A9E511500FA047B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4FDE76282A9E511500FA047B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FDE76292A9E511500FA047B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FDE762D2A9E511600FA047B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FDE762E2A9E511600FA047B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FDE76312A9E511600FA047B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4FDE76322A9E511600FA047B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FDE76342A9E511600FA047B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnlineRadioApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.OnlineRadioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FDE76352A9E511600FA047B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnlineRadioApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.OnlineRadioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FDE761A2A9E511500FA047B /* Build configuration list for PBXProject "OnlineRadioApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDE76312A9E511600FA047B /* Debug */,
+				4FDE76322A9E511600FA047B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FDE76332A9E511600FA047B /* Build configuration list for PBXNativeTarget "OnlineRadioApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDE76342A9E511600FA047B /* Debug */,
+				4FDE76352A9E511600FA047B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4FDE76362A9E525A00FA047B /* XCRemoteSwiftPackageReference "switchboard-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/switchboard-sdk/switchboard-sdk-ios";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		4FDE763B2A9E529400FA047B /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
+			requirement = {
+				kind = exactVersion;
+				version = 3.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4FDE76372A9E525A00FA047B /* SwitchboardAgora */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FDE76362A9E525A00FA047B /* XCRemoteSwiftPackageReference "switchboard-sdk-ios" */;
+			productName = SwitchboardAgora;
+		};
+		4FDE76392A9E525A00FA047B /* SwitchboardSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FDE76362A9E525A00FA047B /* XCRemoteSwiftPackageReference "switchboard-sdk-ios" */;
+			productName = SwitchboardSDK;
+		};
+		4FDE763C2A9E529400FA047B /* RtcBasic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FDE763B2A9E529400FA047B /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = RtcBasic;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4FDE76172A9E511500FA047B /* Project object */;
+}
