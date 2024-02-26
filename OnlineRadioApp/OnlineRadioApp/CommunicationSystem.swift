@@ -55,8 +55,7 @@ class CommunicationSystem {
     private var state: State = .left
 
     init(isHost: Bool) {
-        let api = SwitchboardAPI(baseURL: Config.switchboardAPIBaseURL)
-        roomManager = RoomManager(switchboardAPI: api)
+        roomManager = RoomManager()
         self.isHost = isHost
     }
 
