@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 PROJECT_DIR="$(git rev-parse --show-toplevel)"
 XCODE_PROJECT_PATH="${PROJECT_DIR}/OnlineRadioApp/OnlineRadioApp.xcodeproj"
 SCHEME_NAME="OnlineRadioApp"
