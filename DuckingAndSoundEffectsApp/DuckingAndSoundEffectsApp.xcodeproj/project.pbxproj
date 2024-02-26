@@ -22,7 +22,18 @@
 		4FDF2E182A8BE6C70034DC53 /* SwitchboardSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDF2E172A8BE6C70034DC53 /* SwitchboardSDK */; };
 		62F214612A95DEC50007C903 /* EMH-My_Lover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62F214602A95DEC50007C903 /* EMH-My_Lover.mp3 */; };
 		62F214632A961EB90007C903 /* airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62F214622A961EB90007C903 /* airhorn.mp3 */; };
+		987B81A32B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987B81A22B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		987B81A62B8CD6F5002337F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FDF2DF52A8BE6100034DC53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FDF2DFC2A8BE6100034DC53;
+			remoteInfo = DuckingAndSoundEffectsApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4F2C4EB22A8D244A008A51A0 /* AudioSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSystem.swift; sourceTree = "<group>"; };
@@ -39,6 +50,8 @@
 		4FDF2E0E2A8BE6110034DC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62F214602A95DEC50007C903 /* EMH-My_Lover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "EMH-My_Lover.mp3"; sourceTree = "<group>"; };
 		62F214622A961EB90007C903 /* airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = airhorn.mp3; sourceTree = "<group>"; };
+		987B81A02B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuckingAndSoundEffectsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		987B81A22B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuckingAndSoundEffectsAppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		987B819D2B8CD6F5002337F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDF2DFF2A8BE6100034DC53 /* DuckingAndSoundEffectsApp */,
+				987B81A12B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests */,
 				4FDF2DFE2A8BE6100034DC53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDF2DFD2A8BE6100034DC53 /* DuckingAndSoundEffectsApp.app */,
+				987B81A02B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +121,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		987B81A12B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				987B81A22B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.swift */,
+			);
+			path = DuckingAndSoundEffectsAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +154,24 @@
 			productReference = 4FDF2DFD2A8BE6100034DC53 /* DuckingAndSoundEffectsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		987B819F2B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987B81A82B8CD6F5002337F2 /* Build configuration list for PBXNativeTarget "DuckingAndSoundEffectsAppUITests" */;
+			buildPhases = (
+				987B819C2B8CD6F5002337F2 /* Sources */,
+				987B819D2B8CD6F5002337F2 /* Frameworks */,
+				987B819E2B8CD6F5002337F2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				987B81A72B8CD6F5002337F2 /* PBXTargetDependency */,
+			);
+			name = DuckingAndSoundEffectsAppUITests;
+			productName = DuckingAndSoundEffectsAppUITests;
+			productReference = 987B81A02B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,11 +179,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					4FDF2DFC2A8BE6100034DC53 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					987B819F2B8CD6F5002337F2 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 4FDF2DFC2A8BE6100034DC53;
 					};
 				};
 			};
@@ -157,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				4FDF2DFC2A8BE6100034DC53 /* DuckingAndSoundEffectsApp */,
+				987B819F2B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -171,6 +224,13 @@
 				4FDF2E0A2A8BE6110034DC53 /* Assets.xcassets in Resources */,
 				62F214612A95DEC50007C903 /* EMH-My_Lover.mp3 in Resources */,
 				4FDF2E082A8BE6100034DC53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		987B819E2B8CD6F5002337F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +251,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		987B819C2B8CD6F5002337F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				987B81A32B8CD6F5002337F2 /* DuckingAndSoundEffectsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		987B81A72B8CD6F5002337F2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FDF2DFC2A8BE6100034DC53 /* DuckingAndSoundEffectsApp */;
+			targetProxy = 987B81A62B8CD6F5002337F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FDF2E062A8BE6100034DC53 /* Main.storyboard */ = {
@@ -383,6 +459,51 @@
 			};
 			name = Release;
 		};
+		987B81A92B8CD6F5002337F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.DuckingAndSoundEffectsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DuckingAndSoundEffectsApp;
+			};
+			name = Debug;
+		};
+		987B81AA2B8CD6F5002337F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.DuckingAndSoundEffectsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DuckingAndSoundEffectsApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +525,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		987B81A82B8CD6F5002337F2 /* Build configuration list for PBXNativeTarget "DuckingAndSoundEffectsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				987B81A92B8CD6F5002337F2 /* Debug */,
+				987B81AA2B8CD6F5002337F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -419,8 +549,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/switchboard-sdk/switchboard-sdk-ios";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

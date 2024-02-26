@@ -24,7 +24,18 @@
 		4FDE764D2A9E548F00FA047B /* airhorn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE764B2A9E548F00FA047B /* airhorn.mp3 */; };
 		4FDE764E2A9E548F00FA047B /* EMH-My_Lover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE764C2A9E548F00FA047B /* EMH-My_Lover.mp3 */; };
 		4FDE76502A9E5AB300FA047B /* CommunicationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE764F2A9E5AB300FA047B /* CommunicationSystem.swift */; };
+		986BD5FD2B8CD69A00AF212E /* OnlineRadioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986BD5FC2B8CD69A00AF212E /* OnlineRadioAppUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		986BD6002B8CD69A00AF212E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FDE76172A9E511500FA047B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FDE761E2A9E511500FA047B;
+			remoteInfo = OnlineRadioApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineRadioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +54,8 @@
 		4FDE764B2A9E548F00FA047B /* airhorn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = airhorn.mp3; path = ../../../DuckingAndSoundEffectsApp/DuckingAndSoundEffectsApp/Resources/airhorn.mp3; sourceTree = "<group>"; };
 		4FDE764C2A9E548F00FA047B /* EMH-My_Lover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "EMH-My_Lover.mp3"; path = "../../../DuckingAndSoundEffectsApp/DuckingAndSoundEffectsApp/Resources/EMH-My_Lover.mp3"; sourceTree = "<group>"; };
 		4FDE764F2A9E5AB300FA047B /* CommunicationSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationSystem.swift; sourceTree = "<group>"; };
+		986BD5FA2B8CD69A00AF212E /* OnlineRadioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineRadioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		986BD5FC2B8CD69A00AF212E /* OnlineRadioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineRadioAppUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		986BD5F72B8CD69A00AF212E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDE76212A9E511500FA047B /* OnlineRadioApp */,
+				986BD5FB2B8CD69A00AF212E /* OnlineRadioAppUITests */,
 				4FDE76202A9E511500FA047B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */,
+				986BD5FA2B8CD69A00AF212E /* OnlineRadioAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +143,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		986BD5FB2B8CD69A00AF212E /* OnlineRadioAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				986BD5FC2B8CD69A00AF212E /* OnlineRadioAppUITests.swift */,
+			);
+			path = OnlineRadioAppUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +176,24 @@
 			productReference = 4FDE761F2A9E511500FA047B /* OnlineRadioApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		986BD5F92B8CD69A00AF212E /* OnlineRadioAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986BD6022B8CD69A00AF212E /* Build configuration list for PBXNativeTarget "OnlineRadioAppUITests" */;
+			buildPhases = (
+				986BD5F62B8CD69A00AF212E /* Sources */,
+				986BD5F72B8CD69A00AF212E /* Frameworks */,
+				986BD5F82B8CD69A00AF212E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				986BD6012B8CD69A00AF212E /* PBXTargetDependency */,
+			);
+			name = OnlineRadioAppUITests;
+			productName = OnlineRadioAppUITests;
+			productReference = 986BD5FA2B8CD69A00AF212E /* OnlineRadioAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,11 +201,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					4FDE761E2A9E511500FA047B = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					986BD5F92B8CD69A00AF212E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 4FDE761E2A9E511500FA047B;
 					};
 				};
 			};
@@ -179,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				4FDE761E2A9E511500FA047B /* OnlineRadioApp */,
+				986BD5F92B8CD69A00AF212E /* OnlineRadioAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +246,13 @@
 				4FDE762F2A9E511600FA047B /* LaunchScreen.storyboard in Resources */,
 				4FDE762C2A9E511600FA047B /* Assets.xcassets in Resources */,
 				4FDE762A2A9E511500FA047B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		986BD5F82B8CD69A00AF212E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +275,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		986BD5F62B8CD69A00AF212E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986BD5FD2B8CD69A00AF212E /* OnlineRadioAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		986BD6012B8CD69A00AF212E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FDE761E2A9E511500FA047B /* OnlineRadioApp */;
+			targetProxy = 986BD6002B8CD69A00AF212E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4FDE76282A9E511500FA047B /* Main.storyboard */ = {
@@ -407,6 +483,51 @@
 			};
 			name = Release;
 		};
+		986BD6032B8CD69A00AF212E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.OnlineRadioAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OnlineRadioApp;
+			};
+			name = Debug;
+		};
+		986BD6042B8CD69A00AF212E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NQ2VLM7NM7;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.synervoz.OnlineRadioAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OnlineRadioApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -428,6 +549,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		986BD6022B8CD69A00AF212E /* Build configuration list for PBXNativeTarget "OnlineRadioAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986BD6032B8CD69A00AF212E /* Debug */,
+				986BD6042B8CD69A00AF212E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -435,8 +565,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/switchboard-sdk/switchboard-sdk-ios";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = exactVersion;
+				version = 1.8.1;
 			};
 		};
 		4FDE763B2A9E529400FA047B /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {

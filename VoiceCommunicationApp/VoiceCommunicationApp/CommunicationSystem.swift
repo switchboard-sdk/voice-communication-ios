@@ -50,8 +50,7 @@ class CommunicationSystem {
     private var state: State = .left
 
     init() {
-        let api = SwitchboardAPI(baseURL: Config.switchboardAPIBaseURL)
-        roomManager = RoomManager(switchboardAPI: api)
+        roomManager = RoomManager()
     }
 
     private func connect(name: String, roomID: String) {
