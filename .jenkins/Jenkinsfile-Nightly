@@ -9,15 +9,11 @@ pipeline {
                 sh 'bash VoiceCommunicationApp/scripts/test.sh'
             }
         }
-    }
-    stages {
         stage('Test DuckingAndSoundEffectsApp') {
             steps {
                 sh 'bash DuckingAndSoundEffectsApp/scripts/test.sh'
             }
         }
-    }
-    stages {
         stage('Test OnlineRadioApp') {
             steps {
                 sh 'bash OnlineRadioApp/scripts/test.sh'
