@@ -566,7 +566,7 @@
 			repositoryURL = "https://github.com/switchboard-sdk/switchboard-sdk-ios";
 			requirement = {
 				kind = exactVersion;
-				version = 1.8.1;
+				version = 1.9.0;
 			};
 		};
 		4FDE763B2A9E529400FA047B /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
