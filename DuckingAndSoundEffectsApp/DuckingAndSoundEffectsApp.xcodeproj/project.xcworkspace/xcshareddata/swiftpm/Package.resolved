@@ -1,4 +1,5 @@
 {
+  "originHash" : "b243cb6837b3ed98cdb6f41eacf4ebb2cc430f42593d6cacec1f901d423c15df",
   "pins" : [
     {
       "identity" : "agorartcengine_ios",
@@ -14,10 +15,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/switchboard-sdk/switchboard-sdk-ios",
       "state" : {
-        "revision" : "a79244712c7d08a26abfb1a63747d4ad952e0a89",
-        "version" : "1.8.1"
+        "revision" : "f14f4bd742aff26d1935b6df770b7fbb3e918ac4",
+        "version" : "1.10.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
