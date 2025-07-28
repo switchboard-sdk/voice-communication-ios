@@ -5,7 +5,7 @@ set -eu
 PROJECT_DIR="$(git rev-parse --show-toplevel)"
 XCODE_PROJECT_PATH="${PROJECT_DIR}/VoiceCommunicationApp/VoiceCommunicationApp.xcodeproj"
 SCHEME_NAME="VoiceCommunicationApp"
-DESTINATION="platform=iOS Simulator,name=iPhone 15"
+DESTINATION="platform=iOS Simulator,name=iPhone 16"
 
 xcodebuild clean test \
   -project "$XCODE_PROJECT_PATH" \
