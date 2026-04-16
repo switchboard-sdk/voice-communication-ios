@@ -18,7 +18,7 @@ class ListenerViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioSystem = ListenerAudioSystem(roomManager: communicationSystem.roomManager)
+        audioSystem = ListenerAudioSystem()
         communicationSystem.delegate = self
 
         actionButton.isEnabled = false

@@ -9,40 +9,65 @@ import SwitchboardSDK
 import SwitchboardAgora
 
 class AudioSystem {
-    let audioEngine = SBAudioEngine()
-    let audioGraph = SBAudioGraph()
-    let multiChannelToMonoNode = SBMultiChannelToMonoNode()
-    let agoraResampledSourceNode = SBResampledSourceNode()
-    let agoraResampledSinkNode = SBResampledSinkNode()
-    let monoToMultiChannelNode = SBMonoToMultiChannelNode()
+    var engineID: String = ""
 
-    init(roomManager: RoomManager) {
-        audioEngine.microphoneEnabled = true
-        audioEngine.voiceProcessingEnabled = true
+    private static let graphJSON = """
+    {
+        "type": "Realtime",
+        "config": {
+            "microphoneEnabled": true,
+            "voiceProcessingEnabled": true,
+            "graph": {
+                "nodes": [
+                    {"id": "multiChannelToMonoNode", "type": "MultiChannelToMono"},
+                    {
+                        "id": "agoraResampledSinkNode",
+                        "type": "ResampledSink",
+                        "config": {
+                            "sampleRate": 48000,
+                            "node": {
+                                "id": "agoraSinkNode",
+                                "type": "Agora.Sink"
+                            }
+                        }
+                    },
+                    {
+                        "id": "agoraResampledSourceNode",
+                        "type": "ResampledSource",
+                        "config": {
+                            "sampleRate": 48000,
+                            "node": {
+                                "id": "agoraSourceNode",
+                                "type": "Agora.Source"
+                            }
+                        }
+                    },
+                    {"id": "monoToMultiChannelNode", "type": "MonoToMultiChannel"}
+                ],
+                "connections": [
+                    {"sourceNode": "inputNode", "destinationNode": "multiChannelToMonoNode"},
+                    {"sourceNode": "multiChannelToMonoNode", "destinationNode": "agoraResampledSinkNode"},
+                    {"sourceNode": "agoraResampledSourceNode", "destinationNode": "monoToMultiChannelNode"},
+                    {"sourceNode": "monoToMultiChannelNode", "destinationNode": "outputNode"}
+                ]
+            }
+        }
+    }
+    """
 
-        agoraResampledSourceNode.sourceNode = roomManager.sourceNode
-        agoraResampledSinkNode.sinkNode = roomManager.sinkNode
-        
-        agoraResampledSourceNode.internalSampleRate = roomManager.audioBus.getSampleRate()
-        agoraResampledSinkNode.internalSampleRate = roomManager.audioBus.getSampleRate()
-
-        audioGraph.addNode(multiChannelToMonoNode)
-        audioGraph.addNode(agoraResampledSourceNode)
-        audioGraph.addNode(agoraResampledSinkNode)
-        audioGraph.addNode(monoToMultiChannelNode)
-
-        audioGraph.connect(audioGraph.inputNode, to: multiChannelToMonoNode)
-        audioGraph.connect(multiChannelToMonoNode, to: agoraResampledSinkNode)
-
-        audioGraph.connect(agoraResampledSourceNode, to: monoToMultiChannelNode)
-        audioGraph.connect(monoToMultiChannelNode, to: audioGraph.outputNode)
+    init() {
+        let result = Switchboard.createEngine(withJSON: Self.graphJSON)
+        guard result.success else {
+            fatalError("Failed to create audio engine: \(result.error!)")
+        }
+        engineID = result.value! as String
     }
 
     func start() {
-        audioEngine.start(audioGraph)
+        Switchboard.callAction(withObject: engineID, actionName: "start", params: nil)
     }
 
     func stop() {
-        audioEngine.stop()
+        Switchboard.callAction(withObject: engineID, actionName: "stop", params: nil)
     }
 }

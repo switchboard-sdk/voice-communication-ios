@@ -15,8 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        SBSwitchboardSDK.initialize(withAppID: Config.clientID, appSecret: Config.clientSecret)
-        SBAgoraExtension.initialize(withAgoraAppID: Config.agoraAppID)
+        SBAgoraExtension.loadExtension()
+        let initConfig: [String: Any] = [
+            "appID": Config.clientID,
+            "appSecret": Config.clientSecret,
+            "extensions": ["Agora": ["agoraAppID": Config.agoraAppID]],
+        ]
+        let result = Switchboard.initialize(withConfig: initConfig)
+        guard result.success else {
+            fatalError("Switchboard SDK initialization failed.")
+        }
 
         return true
     }

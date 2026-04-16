@@ -9,90 +9,93 @@ import SwitchboardSDK
 import SwitchboardAgora
 
 class HostAudioSystem {
-    let audioEngine = SBAudioEngine()
-    let audioGraph = SBAudioGraph()
+    var engineID: String = ""
 
-    let agoraResampledSinkNode = SBResampledSinkNode()
-
-    let musicPlayerNode = SBAudioPlayerNode()
-    let effectsPlayerNode = SBAudioPlayerNode()
-    let playerMixerNode = SBMixerNode()
-
-    let inputSplitterNode = SBBusSplitterNode()
-    let inputMultiChannelToMonoNode = SBMultiChannelToMonoNode()
-
-    let musicDuckingNode = SBMusicDuckingNode()
-    let duckingSplitterNode = SBBusSplitterNode()
-
-    let agoraOutputMixerNode = SBMixerNode()
-    let multiChannelToMonoNode = SBMultiChannelToMonoNode()
+    private static let graphJSON = """
+    {
+        "type": "Realtime",
+        "config": {
+            "microphoneEnabled": true,
+            "voiceProcessingEnabled": true,
+            "graph": {
+                "nodes": [
+                    {"id": "musicPlayerNode", "type": "AudioPlayer"},
+                    {"id": "effectsPlayerNode", "type": "AudioPlayer"},
+                    {"id": "playerMixerNode", "type": "Mixer"},
+                    {"id": "inputSplitterNode", "type": "BusSplitter"},
+                    {"id": "inputMultiChannelToMonoNode", "type": "MultiChannelToMono"},
+                    {"id": "musicDuckingNode", "type": "MusicDucking"},
+                    {"id": "duckingSplitterNode", "type": "BusSplitter"},
+                    {"id": "agoraOutputMixerNode", "type": "Mixer"},
+                    {"id": "multiChannelToMonoNode", "type": "MultiChannelToMono"},
+                    {
+                        "id": "agoraResampledSinkNode",
+                        "type": "ResampledSink",
+                        "config": {
+                            "sampleRate": 48000,
+                            "node": {
+                                "id": "agoraSinkNode",
+                                "type": "Agora.Sink"
+                            }
+                        }
+                    }
+                ],
+                "connections": [
+                    {"sourceNode": "effectsPlayerNode", "destinationNode": "playerMixerNode"},
+                    {"sourceNode": "musicPlayerNode", "destinationNode": "playerMixerNode"},
+                    {"sourceNode": "playerMixerNode", "destinationNode": "musicDuckingNode"},
+                    {"sourceNode": "inputNode", "destinationNode": "inputSplitterNode"},
+                    {"sourceNode": "inputSplitterNode", "destinationNode": "inputMultiChannelToMonoNode"},
+                    {"sourceNode": "inputMultiChannelToMonoNode", "destinationNode": "musicDuckingNode"},
+                    {"sourceNode": "musicDuckingNode", "destinationNode": "duckingSplitterNode"},
+                    {"sourceNode": "inputSplitterNode", "destinationNode": "agoraOutputMixerNode"},
+                    {"sourceNode": "duckingSplitterNode", "destinationNode": "agoraOutputMixerNode"},
+                    {"sourceNode": "agoraOutputMixerNode", "destinationNode": "multiChannelToMonoNode"},
+                    {"sourceNode": "multiChannelToMonoNode", "destinationNode": "agoraResampledSinkNode"},
+                    {"sourceNode": "duckingSplitterNode", "destinationNode": "outputNode"}
+                ]
+            }
+        }
+    }
+    """
 
     var isPlaying: Bool {
-        musicPlayerNode.isPlaying
+        Switchboard.getValueForKey("isPlaying", object: "musicPlayerNode").value as? Bool ?? false
     }
 
-    init(roomManager: RoomManager) {
-        audioEngine.microphoneEnabled = true
-        audioEngine.voiceProcessingEnabled = true
-
-        agoraResampledSinkNode.sinkNode = roomManager.sinkNode
-        agoraResampledSinkNode.internalSampleRate = roomManager.audioBus.getSampleRate()
+    init() {
+        let result = Switchboard.createEngine(withJSON: Self.graphJSON)
+        guard result.success else {
+            fatalError("Failed to create audio engine: \(result.error!)")
+        }
+        engineID = result.value! as String
 
         let music = Bundle.main.url(forResource: "EMH-My_Lover", withExtension: "mp3")!
         let effect = Bundle.main.url(forResource: "airhorn", withExtension: "mp3")!
 
-        musicPlayerNode.isLoopingEnabled = true
-        musicPlayerNode.load(music.absoluteString, withFormat: .apple)
-        effectsPlayerNode.load(effect.absoluteString, withFormat: .apple)
-
-        audioGraph.addNode(agoraResampledSinkNode)
-        audioGraph.addNode(musicPlayerNode)
-        audioGraph.addNode(effectsPlayerNode)
-        audioGraph.addNode(playerMixerNode)
-        audioGraph.addNode(inputSplitterNode)
-        audioGraph.addNode(inputMultiChannelToMonoNode)
-        audioGraph.addNode(musicDuckingNode)
-        audioGraph.addNode(duckingSplitterNode)
-        audioGraph.addNode(agoraOutputMixerNode)
-        audioGraph.addNode(multiChannelToMonoNode)
-
-        audioGraph.connect(effectsPlayerNode, to: playerMixerNode)
-
-        audioGraph.connect(musicPlayerNode, to: playerMixerNode)
-        audioGraph.connect(playerMixerNode, to: musicDuckingNode)
-
-        audioGraph.connect(audioGraph.inputNode, to: inputSplitterNode)
-        audioGraph.connect(inputSplitterNode, to: inputMultiChannelToMonoNode)
-        audioGraph.connect(inputMultiChannelToMonoNode, to: musicDuckingNode)
-
-        audioGraph.connect(musicDuckingNode, to: duckingSplitterNode)
-
-        audioGraph.connect(inputSplitterNode, to: agoraOutputMixerNode)
-        audioGraph.connect(duckingSplitterNode, to: agoraOutputMixerNode)
-        audioGraph.connect(agoraOutputMixerNode, to: multiChannelToMonoNode)
-        audioGraph.connect(multiChannelToMonoNode, to: agoraResampledSinkNode)
-
-        audioGraph.connect(duckingSplitterNode, to: audioGraph.outputNode)
+        Switchboard.setValue(true, forKey: "isLoopingEnabled", onObject: "musicPlayerNode")
+        Switchboard.callAction(withObject: "musicPlayerNode", actionName: "load", params: ["audioFilePath": music.absoluteString, "codec": "apple"])
+        Switchboard.callAction(withObject: "effectsPlayerNode", actionName: "load", params: ["audioFilePath": effect.absoluteString, "codec": "apple"])
     }
 
     func start() {
-        audioEngine.start(audioGraph)
+        Switchboard.callAction(withObject: engineID, actionName: "start", params: nil)
     }
 
     func stop() {
-        audioEngine.stop()
+        Switchboard.callAction(withObject: engineID, actionName: "stop", params: nil)
     }
 
     func playMusic() {
-        musicPlayerNode.play()
+        Switchboard.callAction(withObject: "musicPlayerNode", actionName: "play", params: nil)
     }
 
     func pauseMusic() {
-        musicPlayerNode.pause()
+        Switchboard.callAction(withObject: "musicPlayerNode", actionName: "pause", params: nil)
     }
 
     func playSoundEffect() {
-        effectsPlayerNode.stop()
-        effectsPlayerNode.play()
+        Switchboard.callAction(withObject: "effectsPlayerNode", actionName: "stop", params: nil)
+        Switchboard.callAction(withObject: "effectsPlayerNode", actionName: "play", params: nil)
     }
 }
