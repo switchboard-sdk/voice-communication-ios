@@ -9,27 +9,49 @@ import SwitchboardSDK
 import SwitchboardAgora
 
 class ListenerAudioSystem {
-    let audioEngine = SBAudioEngine()
-    let audioGraph = SBAudioGraph()
-    let agoraResampledSourceNode = SBResampledSourceNode()
-    let monoToMultiChannelNode = SBMonoToMultiChannelNode()
+    var engineID: String = ""
 
-    init(roomManager: RoomManager) {
-        agoraResampledSourceNode.sourceNode = roomManager.sourceNode
-        agoraResampledSourceNode.internalSampleRate = roomManager.audioBus.getSampleRate()
+    private static let graphJSON = """
+    {
+        "type": "Realtime",
+        "config": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "agoraResampledSourceNode",
+                        "type": "ResampledSource",
+                        "config": {
+                            "sampleRate": 48000,
+                            "node": {
+                                "id": "agoraSourceNode",
+                                "type": "Agora.Source"
+                            }
+                        }
+                    },
+                    {"id": "monoToMultiChannelNode", "type": "MonoToMultiChannel"}
+                ],
+                "connections": [
+                    {"sourceNode": "agoraResampledSourceNode", "destinationNode": "monoToMultiChannelNode"},
+                    {"sourceNode": "monoToMultiChannelNode", "destinationNode": "outputNode"}
+                ]
+            }
+        }
+    }
+    """
 
-        audioGraph.addNode(agoraResampledSourceNode)
-        audioGraph.addNode(monoToMultiChannelNode)
-
-        audioGraph.connect(agoraResampledSourceNode, to: monoToMultiChannelNode)
-        audioGraph.connect(monoToMultiChannelNode, to: audioGraph.outputNode)
+    init() {
+        let result = Switchboard.createEngine(withJSON: Self.graphJSON)
+        guard result.success else {
+            fatalError("Failed to create audio engine: \(result.error!)")
+        }
+        engineID = result.value! as String
     }
 
     func start() {
-        audioEngine.start(audioGraph)
+        Switchboard.callAction(withObject: engineID, actionName: "start", params: nil)
     }
 
     func stop() {
-        audioEngine.stop()
+        Switchboard.callAction(withObject: engineID, actionName: "stop", params: nil)
     }
 }

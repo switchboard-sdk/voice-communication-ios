@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioSystem = AudioSystem(roomManager: communicationSystem.roomManager)
+        audioSystem = AudioSystem()
         communicationSystem.delegate = self
 
         joinButton.isEnabled = false

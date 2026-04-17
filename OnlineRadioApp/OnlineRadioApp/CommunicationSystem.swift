@@ -26,7 +26,7 @@ class CommunicationSystem {
     weak var delegate: CommunicationDelegate?
 
     let roomManager: RoomManager
-    var room: Room?
+    var room: (any Room)?
 
     let isHost: Bool
 
@@ -104,7 +104,7 @@ class CommunicationSystem {
 }
 
 extension CommunicationSystem: RoomDelegate {
-    func room(room _: SwitchboardAgora.Room, didUpdateConnectionState connState: SwitchboardAgora.RoomConnectionState) {
+    func room(room _: any SwitchboardAgora.Room, didUpdateConnectionState connState: SwitchboardAgora.RoomConnectionState) {
         if state == .joining {
             var roleConnected = false
             if isHost {
@@ -130,39 +130,39 @@ extension CommunicationSystem: RoomDelegate {
         }
     }
 
-    func room(room _: SwitchboardAgora.Room, didFailToJoinWithError error: Error) {
+    func room(room _: any SwitchboardAgora.Room, didFailToJoinWithError error: Error) {
         delegate?.receivedError(error)
     }
 
-    func room(room _: SwitchboardAgora.Room, didFailToPublishWithError error: Error) {
+    func room(room _: any SwitchboardAgora.Room, didFailToPublishWithError error: Error) {
         delegate?.receivedError(error)
     }
 
-    func room(room _: SwitchboardAgora.Room, didFailToSubscribeWithError error: Error) {
+    func room(room _: any SwitchboardAgora.Room, didFailToSubscribeWithError error: Error) {
         delegate?.receivedError(error)
     }
 
-    func room(room _: SwitchboardAgora.Room, didUpdatePublisherVideoView _: UIView?) {}
+    func room(room _: any SwitchboardAgora.Room, didUpdatePublisherVideoView _: UIView?) {}
 
-    func room(room _: SwitchboardAgora.Room, didUpdateSubscriberVideoViews _: [SwitchboardAgora.SubscriberVideoView]) {}
+    func room(room _: any SwitchboardAgora.Room, didUpdateSubscriberVideoViews _: [SwitchboardAgora.SubscriberVideoView]) {}
 
-    func room(room _: SwitchboardAgora.Room, didUpdatePublisherAudioLevel _: Float) {}
+    func room(room _: any SwitchboardAgora.Room, didUpdatePublisherAudioLevel _: Float) {}
 
-    func room(room _: SwitchboardAgora.Room, didUpdateSubscriberAudioLevel _: Float, forUser _: String?) {}
+    func room(room _: any SwitchboardAgora.Room, didUpdateSubscriberAudioLevel _: Float, forUser _: String?) {}
 
-    func room(room _: SwitchboardAgora.Room, userDidJoin user: String) {
+    func room(room _: any SwitchboardAgora.Room, userDidJoin user: String) {
         print("SHITTYFLUTE \(user)")
     }
 
-    func room(room _: SwitchboardAgora.Room, userDidLeave user: String) {}
+    func room(room _: any SwitchboardAgora.Room, userDidLeave user: String) {}
 
-    func room(room _: SwitchboardAgora.Room, userDidMute _: String) {}
+    func room(room _: any SwitchboardAgora.Room, userDidMute _: String) {}
 
-    func room(room _: SwitchboardAgora.Room, userDidUnmute _: String) {}
+    func room(room _: any SwitchboardAgora.Room, userDidUnmute _: String) {}
 
-    func room(room _: SwitchboardAgora.Room, videoDidMute _: String) {}
+    func room(room _: any SwitchboardAgora.Room, videoDidMute _: String) {}
 
-    func room(room _: SwitchboardAgora.Room, videoDidUnmute _: String) {}
+    func room(room _: any SwitchboardAgora.Room, videoDidUnmute _: String) {}
 
-    func room(room _: SwitchboardAgora.Room, videoPublisherState _: Bool) {}
+    func room(room _: any SwitchboardAgora.Room, videoPublisherState _: Bool) {}
 }

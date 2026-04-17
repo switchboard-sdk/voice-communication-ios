@@ -47,7 +47,7 @@ idMusicPlayer(Music - AudioPlayerNode)--->idPlayerMixer
 idPlayerMixer-->idDucking[MusicDuckingNode]
 dInput(Voice - InputNode)-->idInputSplitter[BusSplitterNode]
 idInputSplitter-->idInputMultiToMono[MultiChannelToMonoNode]
-idInputMultiToMono--control-->idDucking
+idInputMultiToMono-->idDuckingSignalMixer[MixerNode]
 idInputSplitter--->idAgoraOutputMixer[MixerNode]
 idEffectSplitter-->idAgoraOutputMixer
 idAgoraOutputMixer-->idMultiToMono[MultiChannelToMonoNode]
@@ -59,8 +59,9 @@ subgraph idSourceRes[ResampledSourceNode]
     idSource[Remote - SourceNode]
 end
 idSourceRes-->idSourceSplitter[BusSplitterNode]
-idSourceSplitter--control-->idDucking
+idSourceSplitter-->idDuckingSignalMixer
 idSourceSplitter--->idMonoToMulti[MonoToMultiChannelNode]
+idDuckingSignalMixer--control-->idDucking
 idMonoToMulti-->idSpeakerMixer[MixerNode]
 idDucking-->idSpeakerMixer
 idSpeakerMixer-->idOutput(Speaker - OutputNode)

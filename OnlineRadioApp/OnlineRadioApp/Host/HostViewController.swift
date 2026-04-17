@@ -19,7 +19,7 @@ class HostViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        audioSystem = HostAudioSystem(roomManager: communicationSystem.roomManager)
+        audioSystem = HostAudioSystem()
         communicationSystem.delegate = self
 
         actionButton.isEnabled = false
